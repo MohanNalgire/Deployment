@@ -1,0 +1,17 @@
+FROM node:19-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy source and other files to workspace
+COPY package*.json ./
+
+RUN npm install 
+
+# Copy all files to defined folder
+COPY /src /app
+
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

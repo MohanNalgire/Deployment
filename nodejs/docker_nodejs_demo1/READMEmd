@@ -1,0 +1,17 @@
+
+
+### docker 
+
+1. build your image
+   
+```bash
+    docker build -t express-server .
+```
+
+2. Run your cotainer
+   
+```bash
+docker run --rm -it -p 5000:5000 --name express-server -v F:/nodejs/src/app.js --network backend-net --env-file=./.env express-server
+```
+
+3. t
